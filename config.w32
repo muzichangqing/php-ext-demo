@@ -1,0 +1,7 @@
+ARG_ENABLE('php-ext-demo', 'php-ext-demo support', 'no');
+
+if (PHP_PHP-EXT-DEMO != 'no') {
+	AC_DEFINE('HAVE_PHP-EXT-DEMO', 1, 'php-ext-demo support enabled');
+
+	EXTENSION('php-ext-demo', 'php-ext-demo.c', null, '/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1');
+}
