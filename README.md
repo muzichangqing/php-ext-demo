@@ -26,3 +26,22 @@
 命令执行成功后，生成的项目文件被放在了 ext/php-ext-demo 中
 
 ##### 修改config.m4
+
+    cd ext/php-ext-demo
+    vim config.m4
+
+修改 config.m4里的内容为：
+
+    PHP_ARG_ENABLE(php-ext-demo, whether to enable php-ext-demo support,
+        Make sure that the comment is aligned:
+    [  --enable-php-ext-demo          Enable php-ext-demo support])
+
+    if test "$PHP_PHP-EXT-DEMO" != "no"; then
+      PHP_NEW_EXTENSION(php-ext-demo, php-ext-demo.c, $ext_shared)
+    fi
+
+
+PHP_NEW_EXTENSION(php-ext-demo, php-ext-demo.c, $ext_shared) 分别声明了扩展的名称，源文件名，编译形式（$ext_shared代表动态库）
+
+
+
