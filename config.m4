@@ -1,10 +1,7 @@
-PHP_ARG_ENABLE(php-ext-demo, whether to enable php-ext-demo support,
+PHP_ARG_ENABLE(ext_demo, whether to enable ext_demo support,
     Make sure that the comment is aligned:
-[  --enable-php-ext-demo          Enable php-ext-demo support])
+[  --enable-php-ext-demo          Enable ext_demo support])
 
-if test "$PHP_PHP-EXT-DEMO" != "no"; then
-
-  AC_DEFINE(HAVE_PHP-EXT-DEMO, 1, [ Have php-ext-demo support ])
-
-  PHP_NEW_EXTENSION(php-ext-demo, php-ext-demo.c, $ext_shared)
+if test "$PHP_EXT_DEMO" != "no"; then
+  PHP_NEW_EXTENSION(ext_demo, ext_demo.c, $ext_shared)
 fi

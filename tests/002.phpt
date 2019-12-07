@@ -1,17 +1,17 @@
 --TEST--
-php-ext-demo_test1() Basic test
+ext_demo_test1() Basic test
 --SKIPIF--
 <?php
-if (!extension_loaded('php-ext-demo')) {
+if (!extension_loaded('ext_demo')) {
 	echo 'skip';
 }
 ?>
 --FILE--
 <?php
-$ret = php-ext-demo_test1();
+$ret = ext_demo_test1();
 
 var_dump($ret);
 ?>
 --EXPECT--
-The extension php-ext-demo is loaded and working!
+The extension ext_demo is loaded and working!
 NULL

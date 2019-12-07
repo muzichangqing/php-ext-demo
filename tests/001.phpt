@@ -1,14 +1,14 @@
 --TEST--
-Check if php-ext-demo is loaded
+Check if ext_demo is loaded
 --SKIPIF--
 <?php
-if (!extension_loaded('php-ext-demo')) {
+if (!extension_loaded('ext_demo')) {
 	echo 'skip';
 }
 ?>
 --FILE--
 <?php
-echo 'The extension "php-ext-demo" is available';
+echo 'The extension "ext_demo" is available';
 ?>
 --EXPECT--
-The extension "php-ext-demo" is available
+The extension "ext_demo" is available
