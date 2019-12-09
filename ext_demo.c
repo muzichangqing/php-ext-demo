@@ -44,6 +44,15 @@ PHP_FUNCTION(ext_demo_test2)
 }
 /* }}}*/
 
+/*{{{ void confirm_ext_demo_compiled() }}}
+*/
+PHP_FUNCTION(confirm_ext_demo_compiled)
+{
+    php_printf("hello world!\n");
+    return;
+}
+/* }}}*/
+
 /* {{{ PHP_RINIT_FUNCTION
  */
 PHP_RINIT_FUNCTION(ext_demo)
@@ -74,6 +83,9 @@ ZEND_END_ARG_INFO()
 ZEND_BEGIN_ARG_INFO(arginfo_ext_demo_test2, 0)
 	ZEND_ARG_INFO(0, str)
 ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO(arginfo_confirm_ext_demo_compiled, 0)
+ZEND_END_ARG_INFO()
 /* }}} */
 
 /* {{{ ext_demo_functions[]
@@ -81,6 +93,7 @@ ZEND_END_ARG_INFO()
 static const zend_function_entry ext_demo_functions[] = {
 	PHP_FE(ext_demo_test1,		arginfo_ext_demo_test1)
 	PHP_FE(ext_demo_test2,		arginfo_ext_demo_test2)
+	PHP_FE(confirm_ext_demo_compiled,		arginfo_confirm_ext_demo_compiled)
 	PHP_FE_END
 };
 /* }}} */
@@ -107,9 +120,3 @@ ZEND_TSRMLS_CACHE_DEFINE()
 # endif
 ZEND_GET_MODULE(ext_demo)
 #endif
-
-PHP_FUNCTION(confirm_ext_demo_compiled)
-{
-    php_printf("hello world!\n");
-    return;
-}
