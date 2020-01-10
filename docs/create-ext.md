@@ -12,6 +12,8 @@
     ./configure
     make 
     sudo make install
+    # 根据提示复制php.ini到指定目录
+    cp php.ini-development /usr/local/lib/php.ini
     make clean
 
 ##### 创建扩展
