@@ -1,6 +1,6 @@
 ### 创建函数
 
-#### 添加函数 ext_demo_plus
+#### 添加函数 ed_strlen
 
 1. 编辑ext_demo.c, 添加函数ed_strlen
 
