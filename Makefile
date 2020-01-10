@@ -4,8 +4,8 @@ top_srcdir = /root/Code/php/php-7.3.12/ext/ext_demo
 top_builddir = /root/Code/php/php-7.3.12/ext/ext_demo
 EGREP = /bin/grep -E
 SED = /bin/sed
-CONFIGURE_COMMAND = './configure' '--with-php-config=/usr/local/bin/php-config'
-CONFIGURE_OPTIONS = '--with-php-config=/usr/local/bin/php-config'
+CONFIGURE_COMMAND = './configure'
+CONFIGURE_OPTIONS =
 SHLIB_SUFFIX_NAME = so
 SHLIB_DL_SUFFIX_NAME = so
 ZEND_EXT_TYPE = zend_extension

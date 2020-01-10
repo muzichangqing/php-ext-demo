@@ -68,7 +68,7 @@ ext_demo.c {{{ext_demo_functions[]}}} 修改为：
 在扩展目录中运行
 
     phpize
-    ./configure --with-php-config=/usr/local/bin/php-config
+    ./configure
     make
     sudo make install
 
