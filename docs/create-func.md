@@ -2,7 +2,7 @@
 
 #### 添加函数 ext_demo_plus
 
-1. 编辑ext_demo.c, 添加函数ext_demo_str_len
+1. 编辑ext_demo.c, 添加函数ed_strlen
 
 ```c
 /* {{{ int ed_strlen() */
