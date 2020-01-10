@@ -1,5 +1,5 @@
-ext_demo.lo: /home/cqli/coding/php-7.3.12/ext/ext_demo/ext_demo.c
-	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/cqli/coding/php-7.3.12/ext/ext_demo $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/cqli/coding/php-7.3.12/ext/ext_demo/ext_demo.c -o ext_demo.lo 
+ext_demo.lo: /root/Code/php/php-7.3.12/ext/ext_demo/ext_demo.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/root/Code/php/php-7.3.12/ext/ext_demo $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /root/Code/php/php-7.3.12/ext/ext_demo/ext_demo.c -o ext_demo.lo 
 $(phplibdir)/ext_demo.la: ./ext_demo.la
 	$(LIBTOOL) --mode=install cp ./ext_demo.la $(phplibdir)
 

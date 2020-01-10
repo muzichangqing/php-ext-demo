@@ -1,7 +1,7 @@
-srcdir = /home/cqli/coding/php-7.3.12/ext/ext_demo
-builddir = /home/cqli/coding/php-7.3.12/ext/ext_demo
-top_srcdir = /home/cqli/coding/php-7.3.12/ext/ext_demo
-top_builddir = /home/cqli/coding/php-7.3.12/ext/ext_demo
+srcdir = /root/Code/php/php-7.3.12/ext/ext_demo
+builddir = /root/Code/php/php-7.3.12/ext/ext_demo
+top_srcdir = /root/Code/php/php-7.3.12/ext/ext_demo
+top_builddir = /root/Code/php/php-7.3.12/ext/ext_demo
 EGREP = /bin/grep -E
 SED = /bin/sed
 CONFIGURE_COMMAND = './configure' '--with-php-config=/usr/local/bin/php-config'
@@ -10,7 +10,7 @@ SHLIB_SUFFIX_NAME = so
 SHLIB_DL_SUFFIX_NAME = so
 ZEND_EXT_TYPE = zend_extension
 RE2C = exit 0;
-AWK = gawk
+AWK = nawk
 shared_objects_ext_demo = ext_demo.lo
 PHP_PECL_EXTENSION = ext_demo
 PHP_MODULES = $(phplibdir)/ext_demo.la
@@ -21,7 +21,7 @@ prefix = /usr/local
 exec_prefix = $(prefix)
 libdir = ${exec_prefix}/lib
 prefix = /usr/local
-phplibdir = /home/cqli/coding/php-7.3.12/ext/ext_demo/modules
+phplibdir = /root/Code/php/php-7.3.12/ext/ext_demo/modules
 phpincludedir = /usr/local/include/php
 CC = cc
 CFLAGS = -g -O2
@@ -189,8 +189,8 @@ prof-use:
 
 .PHONY: all clean install distclean test prof-gen prof-clean prof-use
 .NOEXPORT:
-ext_demo.lo: /home/cqli/coding/php-7.3.12/ext/ext_demo/ext_demo.c
-	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/cqli/coding/php-7.3.12/ext/ext_demo $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/cqli/coding/php-7.3.12/ext/ext_demo/ext_demo.c -o ext_demo.lo 
+ext_demo.lo: /root/Code/php/php-7.3.12/ext/ext_demo/ext_demo.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/root/Code/php/php-7.3.12/ext/ext_demo $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /root/Code/php/php-7.3.12/ext/ext_demo/ext_demo.c -o ext_demo.lo 
 $(phplibdir)/ext_demo.la: ./ext_demo.la
 	$(LIBTOOL) --mode=install cp ./ext_demo.la $(phplibdir)
 
