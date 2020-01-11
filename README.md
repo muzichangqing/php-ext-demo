@@ -4,3 +4,4 @@
 
 1. [创建扩展](docs/create-ext.md)
 2. [创建函数](docs/create-func.md)
+3. [添加参数](docs/add-params.md)
