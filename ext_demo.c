@@ -53,10 +53,15 @@ PHP_FUNCTION(confirm_ext_demo_compiled)
 }
 /* }}} */
 
-/* {{{ int ed_strlen() */
+/* {{{ int ed_strlen(string $str) */
 PHP_FUNCTION(ed_strlen)
 {
-	RETURN_LONG(0)
+    char *str;
+	size_t str_len;
+    ZEND_PARSE_PARAMETERS_START_EX(ZEND_PARSE_PARAMS_THROW, 1, 1)
+		Z_PARAM_STRING(str, str_len)
+	ZEND_PARSE_PARAMETERS_END();
+	RETURN_LONG(str_len)
 }
 /* }}} */
 
@@ -95,6 +100,7 @@ ZEND_BEGIN_ARG_INFO(arginfo_confirm_ext_demo_compiled, 0)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO(arginfo_ed_strlen, 0)
+    ZEND_ARG_INFO(0, str)
 ZEND_END_ARG_INFO()
 /* }}} */
 
