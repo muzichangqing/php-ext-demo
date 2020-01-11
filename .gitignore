@@ -20,3 +20,11 @@ configure
 libtool
 Makefile
 Makefile.objects
+*.gcno
+*.lo
+*.la
+*.so
+.libs
+libphp.la
+modules/*
+libs/*
