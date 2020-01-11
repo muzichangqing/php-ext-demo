@@ -39,11 +39,11 @@ PHP_FUNCTION(ed_strlen)
 PHP_FUNCTION(ed_strlen)
 {
     char *str;
-	size_t str_len;
+    size_t str_len;
     ZEND_PARSE_PARAMETERS_START_EX(ZEND_PARSE_PARAMS_THROW, 1, 1)
-		Z_PARAM_STRING(str, str_len)
-	ZEND_PARSE_PARAMETERS_END();
-	RETURN_LONG(str_len)
+        Z_PARAM_STRING(str, str_len)
+    ZEND_PARSE_PARAMETERS_END();
+    RETURN_LONG(str_len)
 }
 /* }}} */
 ```
