@@ -28,3 +28,4 @@ Makefile.objects
 libphp.la
 modules/*
 libs/*
+build/*
